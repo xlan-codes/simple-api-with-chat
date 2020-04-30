@@ -97,7 +97,7 @@ import { Logger, UnauthorizedException } from '@nestjs/common';
       const messages = await this.roomService.get(data); // add employee to room
   
       // Send last messages to the connected user
-      // client.emit('message', messages);
+      client.emit('message', messages);
     }
   
     /**
